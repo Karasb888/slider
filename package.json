@@ -1,0 +1,23 @@
+{
+  "name": "testTask",
+  "author": "imazurenko",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-livereload": "latest",
+    "gulp-rename": "latest",
+    "gulp-stylus": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "gulp-webserver": "latest",
+    "ttf2woff2": "latest"
+  },
+  "dependencies": {
+    "gulp-less": "^4.0.1"
+  }
+}

@@ -1,0 +1,492 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+@font-face {
+  font-family: "Gotham Pro Medium";
+  src: url("../fonts/GothaProMed.otf") format("opentype");
+}
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+.main {
+  background: #1c1c1e;
+  padding-bottom: 105px;
+  padding-top: 70px;
+}
+.main__header {
+  font-family: "Gotham Pro Medium", san-serif;
+  font-size: 30px;
+  line-height: 25px;
+  padding-bottom: 33px;
+  padding-left: 16px;
+  color: #ffffff;
+}
+@media (max-width: 1210px) {
+  .main__header {
+    font-size: 26px;
+  }
+}
+.main__games {
+  padding-bottom: 33px;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1210px) {
+  .container {
+    width: 950px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 680px;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    position: relative;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+.games__slider-item.hover .games__active {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 30px);
+  top: 0;
+  left: 0;
+  background-color: #1c1c1ec4;
+  z-index: 1;
+}
+.games__slider-item.hover .games__button {
+  width: 170px;
+  line-height: 55px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  font-family: "Gotham Pro Medium", san-serif;
+  background: #f48e06;
+  z-index: 3;
+  position: absolute;
+  top: 43%;
+  left: 28%;
+}
+.games {
+  position: relative;
+}
+@media (max-width: 720px) {
+  .games__slider-item {
+    display: -webkit-box!important;
+    display: -webkit-flex!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -webkit-box-pack: center ;
+    -webkit-justify-content: center ;
+    -ms-flex-pack: center ;
+    justify-content: center ;
+    width: 100vw !important;
+  }
+}
+.games .slick-dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: 22px;
+  left: 48.5%;
+}
+@media (max-width: 1000px) {
+  .games .slick-dots {
+    left: 47%;
+  }
+}
+@media (max-width: 720px) {
+  .games .slick-dots {
+    left: calc(50% - 100px);
+    width: 200px;
+  }
+}
+.games .slick-dots .slick-active button {
+  background-image: url('../img/icons/dot-active.png');
+}
+.games .slick-dots li {
+  width: 16px;
+  height: 16px;
+}
+.games .slick-dots li button {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  line-height: 16px;
+  background-image: url('../img/icons/dot.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.games .slick-dots li button:hover {
+  background-image: url('../img/icons/dot-active.png');
+}
+.games .slick-arrow {
+  position: absolute;
+  width: 50px;
+  z-index: 4;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  background-image: url(../img/icons/arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: 2px;
+}
+@media (max-width: 720px) {
+  .games .slick-arrow {
+    bottom: -58px;
+  }
+}
+.games .slick-prev {
+  left: 42.6%;
+}
+@media (max-width: 1210px) {
+  .games .slick-prev {
+    left: 40%;
+  }
+}
+@media (max-width: 1000px) {
+  .games .slick-prev {
+    left: 38%;
+  }
+}
+@media (max-width: 720px) {
+  .games .slick-prev {
+    left: 27%;
+  }
+}
+.games .slick-prev:hover,
+.games .slick-prev:active {
+  background-image: url(../img/icons/arrow-active.png);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.games .slick-next {
+  right: 42.6%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media (max-width: 1210px) {
+  .games .slick-next {
+    right: 41%;
+  }
+}
+@media (max-width: 1000px) {
+  .games .slick-next {
+    right: 37%;
+  }
+}
+@media (max-width: 720px) {
+  .games .slick-next {
+    right: 27.2%;
+  }
+}
+.games .slick-next:hover,
+.games .slick-next:active {
+  background-image: url(../img/icons/arrow-active.png);
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.games__block {
+  position: relative;
+  -webkit-border-radius: 22px;
+  border-radius: 22px;
+}
+.games__block img {
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+@media (max-width: 1210px) {
+  .games__block img {
+    width: 314px!important;
+  }
+}
+@media (max-width: 1000px) {
+  .games__block img {
+    width: 343px !important;
+  }
+}
+@media (max-width: 720px) {
+  .games__block img {
+    width: 100% !important;
+    max-width: 397px;
+  }
+}
+.games__block_lol img {
+  width: 397px;
+}
+.games__active {
+  display: none;
+}
+.games__heading {
+  position: absolute;
+  bottom: 56px;
+  left: 47px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Gotham Pro Medium", san-serif;
+  z-index: 2;
+}
+@media (max-width: 1210px) {
+  .games__heading {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+.games__count {
+  display: none;
+  position: absolute;
+  bottom: -71px;
+  left: 46%;
+  font-family: "Gotham Pro Medium", san-serif;
+  width: 100px;
+  height: 50px;
+  font-size: 14px;
+  color: #ffffff;
+}
+@media (max-width: 720px) {
+  .games__count {
+    display: block;
+  }
+}

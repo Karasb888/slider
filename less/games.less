@@ -1,0 +1,215 @@
+.main{
+  background: @main-bg;
+  padding-bottom: 105px;
+  padding-top: 70px;
+  &__header{
+  font-family: @gotham-medium;
+  font-size: 30px;
+  line-height: 25px;
+  padding-bottom: 33px;
+  padding-left: 16px;
+  color: @white;
+  @media(max-width: 1210px){
+    font-size: 26px;
+  }
+  }
+  &__games{
+    padding-bottom: 33px;
+  }
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  @media(max-width: 1210px){
+    width: 950px;
+  }
+  @media(max-width: 1000px){
+    width: 680px;
+  }
+  @media(max-width: 720px){
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.games__slider-item.hover{
+  .games__active{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: calc(~"100% - 30px");
+    top: 0;
+    left: 0;
+    background-color: #1c1c1ec4;
+    z-index: 1;
+  }
+    .games__button{
+      width: 170px;
+      line-height: 55px;
+      font-size: 18px;
+      color: @white;
+      text-align: center;
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      font-family: @gotham-medium;
+      background: @orange;
+      z-index: 3;
+      position: absolute;
+      top: 43%;
+      left: 28%;
+  }
+}
+.games{
+  position: relative;
+  &__slider-item{
+    @media(max-width: 720px){
+      display: flex!important;
+      justify-content: center ;
+      width: 100vw !important;
+    }
+  }
+  .slick-dots{
+    display: flex;
+    cursor: pointer;
+    outline: none;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    bottom: 22px;
+    left: 48.5%;
+    @media(max-width: 1000px){
+      left: 47%;
+    }
+    @media(max-width: 720px){
+      left: calc(~"50% - 100px");
+      width: 200px;
+    }
+    .slick-active{
+      button{
+        background-image: url('../img/icons/dot-active.png');
+      }
+    }
+    li{
+      width: 16px;
+      height: 16px;
+      button{
+        display: block;
+        width: 100%;
+        font-size: 0;
+        line-height: 16px;
+        background-image: url('../img/icons/dot.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        &:hover{
+          background-image: url('../img/icons/dot-active.png');
+        }
+      }
+    }
+  }
+  .slick-arrow{
+    position: absolute;
+    width: 50px;
+    z-index: 4;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    background-image: url(../img/icons/arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 2px;
+    @media(max-width: 720px){
+      bottom: -58px;
+    }
+  }
+  .slick-prev{
+    left: 42.6%;
+    @media(max-width: 1210px){
+      left: 40%;
+    }
+    @media(max-width: 1000px){
+      left: 38%;
+    }
+    @media(max-width: 720px){
+      left: 27%;
+    }
+    &:hover,&:active{
+      background-image: url(../img/icons/arrow-active.png);
+      transform: rotate(180deg);
+    }
+  }
+
+  .slick-next{
+    right:42.6%;
+    transform: rotate(180deg);
+    @media(max-width: 1210px){
+      right: 41%;
+    }
+    @media(max-width: 1000px){
+      right:37%;
+    }
+    @media(max-width: 720px){
+      right:27.2%;
+    }
+    &:hover, &:active{
+      background-image: url(../img/icons/arrow-active.png);
+      transform: none;
+    }
+  }
+  &__block{
+    position: relative;
+    border-radius: 22px;
+    img{
+      position: relative;
+      cursor: pointer;
+      display: block;
+      @media(max-width: 1210px){
+        width: 314px!important;
+      }
+      @media(max-width: 1000px){
+        width: 343px !important;
+      }
+      @media(max-width: 720px){
+        width: 100% !important;
+        max-width: 397px;
+      }
+    }
+    &_lol{
+      img{
+        width: 397px;
+      }
+    }
+  }
+  &__active{
+    display: none;
+  }
+  &__heading{
+    position: absolute;
+    bottom: 56px;
+    left: 47px;
+    color: @white;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: @gotham-medium;
+    z-index: 2;
+    @media(max-width: 1210px){
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+  &__count{
+    display: none;
+    position: absolute;
+    bottom: -71px;
+    left: 46%;
+    font-family: @gotham-medium;
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+    color: @white;
+    @media(max-width: 720px){
+      display: block;
+    }
+  }
+}
